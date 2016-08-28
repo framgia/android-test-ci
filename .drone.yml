@@ -1,0 +1,19 @@
+deploy:
+  violationcomments:
+    image: fdplugins/violation-comments
+    enable: true
+    createsinglefilecomments: true
+    createCommentWithAllSingleFileComments: false
+    commentOnlyChangedContent: true
+    github:
+      username: ""
+      password: ""
+      token: $$GITHUB_TOKEN
+    violations:
+       checkstyle: .*/reports/checkstyle/.*\\.xml$
+notify:
+  chatwork:
+      image: fdplugins/chatwork
+      room_id: 41136040
+      token: $$CHATWORK_TOKEN
+      format: "Test"

@@ -1,8 +1,9 @@
 apply plugin: 'com.android.application'
+apply from: "../checkci.gradle"
 
 android {
     compileSdkVersion 24
-    buildToolsVersion "24.0.0"
+    buildToolsVersion "24.0.2"
     defaultConfig {
         applicationId "com.framgia.androidtestci"
         minSdkVersion 14
