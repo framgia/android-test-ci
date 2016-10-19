@@ -1,6 +1,19 @@
+deploy:
+  violationcomments:
+    image: fdplugins/violation-comments:1.0.1
+    enable: true
+    createsinglefilecomments: true
+    createCommentWithAllSingleFileComments: false
+    commentOnlyChangedContent: true
+    github:
+      username: ""
+      password: ""
+      token: $$GITHUB_TOKEN
+    violations:
+       checkstyle: .*/reports/checkstyle/.*\\.xml$
 notify:
   violationcomments:
-    image: fdplugins/violation-comments
+    image: fdplugins/violation-comments:1.0.1
     enable: true
     createsinglefilecomments: true
     createCommentWithAllSingleFileComments: false
