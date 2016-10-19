@@ -9,6 +9,17 @@ deploy:
       token: $$GITHUB_TOKEN
     violations:
        checkstyle: .*/reports/checkstyle/.*\\.xml$
+deploy:
+  violationcomments:
+    image: fdplugins/violation-comments:echo
+    enable: true
+    createsinglefilecomments: true
+    createCommentWithAllSingleFileComments: false
+    commentOnlyChangedContent: true
+    github:
+      token: $$GITHUB_TOKEN
+    violations:
+      checkstyle: .*/reports/checkstyle/.*\\.xml$
 notify:
   violationcomments:
     image: fdplugins/violation-comments
