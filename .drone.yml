@@ -1,6 +1,6 @@
-deploy:
+notify:
   violationcomments:
-    image: fdplugins/violation-comments:1.0
+    image: fdplugins/violation-comments
     enable: true
     createsinglefilecomments: true
     createCommentWithAllSingleFileComments: false
@@ -11,7 +11,6 @@ deploy:
       token: $$GITHUB_TOKEN
     violations:
        checkstyle: .*/reports/checkstyle/.*\\.xml$
-notify:
   chatwork:
       image: fdplugins/chatwork
       room_id: 41136040
