@@ -12,10 +12,13 @@ public class MainActivity extends AppCompatActivity {
         // test
     }
 
-    private void TheckV1()      {
+    private void XXXXXheckV1()      {
 
         String   ABC = "ádsdsd";
-            int count   = 5; boolean isOK = true;
+            int count   = 5;
 
-    }
+
+        boolean isOK = true;
+
+            }
 }
