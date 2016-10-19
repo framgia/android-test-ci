@@ -21,4 +21,11 @@ public class MainActivity extends AppCompatActivity {
             System.out.println("  ref  --> " + ref);
             ref = ref.replace("refs/pull/","").replace("/merge","");
         }*/
+
+    private void CheckV1()      {
+
+        String ABC = "ádsdsd";
+            int count = 5;
+
+    }
 }

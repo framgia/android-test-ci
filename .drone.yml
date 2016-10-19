@@ -1,6 +1,6 @@
 deploy:
   violationcomments:
-    image: fdplugins/violation-comments:echo
+    image: fdplugins/violation-comments:1.0
     enable: true
     createsinglefilecomments: true
     createCommentWithAllSingleFileComments: false

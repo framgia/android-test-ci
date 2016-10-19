@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.15">
+<file name="/Users/haipq/Develop/WorkSpace/CI-CD/android-test-ci/app/src/main/java/com/framgia/androidtestci/MainActivity.java">
+<error line="4" severity="error" message="Wrong order for android.os.Bundle import. Use Ctrl+Shift+O (Eclipse) or Ctrl+Alt+O (Intellij) to sort imports" source="com.puppycrawl.tools.checkstyle.checks.imports.ImportOrderCheck"/>
+<error line="25" column="18" severity="error" message="Method names should start with a lower case letter (e.g. getWidth())" source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="27" column="16" severity="warning" message="Name &apos;ABC&apos; must match pattern &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.LocalVariableNameCheck"/>
+<error line="28" severity="error" message="&apos;member def type&apos; have incorrect indentation level 12, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="28" severity="error" message="&apos;method def&apos; child have incorrect indentation level 12, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+</file>
+</checkstyle>
