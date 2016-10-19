@@ -1,38 +1,11 @@
-deploy:
+build:
   violationcomments:
-    image: fdplugins/violation-comments:test
-    enable: true
-    createsinglefilecomments: true
-    createCommentWithAllSingleFileComments: false
-    commentOnlyChangedContent: true
-    github:
-      token: $$GITHUB_TOKEN
-    violations:
-       checkstyle: .*/reports/checkstyle/.*\\.xml$
-deploy:
-  violationcomments:
-    image: fdplugins/violation-comments:echo
-    enable: true
-    createsinglefilecomments: true
-    createCommentWithAllSingleFileComments: false
-    commentOnlyChangedContent: true
-    github:
-      token: $$GITHUB_TOKEN
-    violations:
-      checkstyle: .*/reports/checkstyle/.*\\.xml$
-notify:
-  violationcomments:
-    image: fdplugins/violation-comments
-    enable: true
-    createsinglefilecomments: true
-    createCommentWithAllSingleFileComments: false
-    commentOnlyChangedContent: true
-    github:
-      token: $$GITHUB_TOKEN
-    violations:
-       checkstyle: .*/reports/checkstyle/.*\\.xml$
-  chatwork:
-      image: fdplugins/chatwork
-      room_id: 41136040
-      token: $$CHATWORK_TOKEN
-      format: "Test"
+    image: framgiaci/violation-comments
+    environment:
+      - ENABLE=true
+      - CREATE_SINGLE_FILE_COMMENTS=true
+      - CREATE_COMMENT_WITH_ALL_SINGLE_FILE_COMMENTS=false
+      - COMMENT_ONLY_CHANGED_CONTENT=true
+      - VIOLATION_CHECKSTYLE=.*/reports/checkstyle/checkstyle.xml$
+    commands:
+    - violationcomments
