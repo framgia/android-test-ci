@@ -12,20 +12,11 @@ public class MainActivity extends AppCompatActivity {
         // test
     }
 
-  /*  private void TESTphatxem() {
-
-    }
-
-        private void ko_loi_a() {
-            String ref = "refs/pull/1/merge";
-            System.out.println("  ref  --> " + ref);
-            ref = ref.replace("refs/pull/","").replace("/merge","");
-        }*/
-
-    private void CheckV1()      {
+    private void XheckV1()      {
 
         String ABC = "ádsdsd";
             int count = 5;
+                boolean isOK = true;
 
     }
 }
