@@ -1,11 +1,6 @@
 build:
   violationcomments:
-    image: framgiaci/violation-comments
-    environment:
-      - ENABLE=true
-      - CREATE_SINGLE_FILE_COMMENTS=true
-      - CREATE_COMMENT_WITH_ALL_SINGLE_FILE_COMMENTS=false
-      - COMMENT_ONLY_CHANGED_CONTENT=true
-      - VIOLATION_CHECKSTYLE=.*/reports/checkstyle/checkstyle.xml$
+    image: fdplugins/android
+    pull: true
     commands:
-    - violationcomments
+    - gradle :app:assembleDebug :app:checkci
