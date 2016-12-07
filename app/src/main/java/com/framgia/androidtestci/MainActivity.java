@@ -5,6 +5,8 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
+    private int             ABC = 4;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -12,13 +14,10 @@ public class MainActivity extends AppCompatActivity {
         // test
     }
 
-    private void XXXXXheckV1()      {
+    private void Test_beTa() {
+                        final int ok = 1;
+    }
 
-        String   ABC = "ádsdsd";
-            int count   = 5;
 
 
-        boolean isOK = true;
-
-            }
 }

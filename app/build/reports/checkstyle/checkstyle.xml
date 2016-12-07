@@ -2,10 +2,9 @@
 <checkstyle version="6.15">
 <file name="/Users/haipq/Develop/WorkSpace/CI-CD/android-test-ci/app/src/main/java/com/framgia/androidtestci/MainActivity.java">
 <error line="4" severity="error" message="Wrong order for android.os.Bundle import. Use Ctrl+Shift+O (Eclipse) or Ctrl+Alt+O (Intellij) to sort imports" source="com.puppycrawl.tools.checkstyle.checks.imports.ImportOrderCheck"/>
-<error line="15" column="18" severity="error" message="Method names should start with a lower case letter (e.g. getWidth())" source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
-<error line="17" column="18" severity="warning" message="Name &apos;ABC&apos; must match pattern &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.LocalVariableNameCheck"/>
-<error line="18" severity="error" message="&apos;member def type&apos; have incorrect indentation level 12, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
-<error line="18" severity="error" message="&apos;method def&apos; child have incorrect indentation level 12, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
-<error line="23" severity="error" message="&apos;method def rcurly&apos; have incorrect indentation level 12, expected level should be 4." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="8" column="29" severity="warning" message="Name &apos;ABC&apos; must match pattern &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
+<error line="17" column="18" severity="error" message="Method names should start with a lower case letter (e.g. getWidth())" source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="18" severity="error" message="&apos;member def modifier&apos; have incorrect indentation level 24, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="18" severity="error" message="&apos;method def&apos; child have incorrect indentation level 24, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
 </file>
 </checkstyle>
