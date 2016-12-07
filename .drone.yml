@@ -1,6 +1,7 @@
 build:
-  violationcomments:
-    image: fdplugins/android
-    pull: true
-    commands:
-    - gradle :app:assembleDebug :app:checkci
+  image: fdplugins/android
+  commands:
+    - curl -o /usr/bin/framgia-ci https://raw.githubusercontent.com/framgia/ci-report-tool/master/dist/framgia-ci && chmod +x /usr/bin/framgia-ci
+    - framgia-ci test
+    - framgia-ci report
+    - framgia-ci finish

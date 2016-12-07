@@ -1,0 +1,7 @@
+project_type: android
+test:
+  checkstyles:
+    enable: true
+    ignore: false
+    command: gradle :app:assembleDebug :app:checkci
+
