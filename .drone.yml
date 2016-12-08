@@ -3,4 +3,9 @@ build:
     image: fdplugins/android
     pull: true
     commands:
-    - gradle :app:assembleDebug :app:checkci
+    - gradle :app:assembleAndroidTest
+    - gradle :app:assembleDebug
+    - gradle :app:lintDebug
+    - gradle :app:checkstyle
+    - gradle :app:findbugs
+    - gradle :app:pmd
