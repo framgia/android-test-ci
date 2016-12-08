@@ -1,0 +1,5 @@
+build:
+  image: fdplugins/android
+  pull: true
+  commands:
+    - framgia-ci run
