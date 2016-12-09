@@ -1,9 +1,5 @@
 project_type: android
 test:
-  build:
-    enable: true
-    ignore: false
-    command: gradle :app:assembleDebug
   checkstyle:
     enable: true
     ignore: true
