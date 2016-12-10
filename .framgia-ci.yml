@@ -2,7 +2,7 @@ project_type: android
 test:
   checkstyle:
     enable: true
-    ignore: true
+    ignore: false
     command: gradle :app:checkstyle
   findbugs:
     enable: true
