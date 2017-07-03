@@ -2,9 +2,10 @@ apply plugin: 'checkstyle'
 apply plugin: 'findbugs'
 apply plugin: 'pmd'
 
+
 android {
     lintOptions {
-        abortOnError true
+        abortOnError false
         xmlReport true
         htmlReport false
         lintConfig file("${project.rootDir}/config/lint/lint.xml")
@@ -12,16 +13,11 @@ android {
     }
 }
 
-findbugs {
-    sourceSets = []
-    ignoreFailures = true
-}
-
 task checkstyle(type: Checkstyle) {
     description 'Run Checkstyle'
     group 'checkci'
 
-    ignoreFailures = false
+    ignoreFailures = true
     showViolations = true
     configFile file("${project.rootDir}/config/checkstyle/android-style.xml")
     configProperties.checkstyleSuppressionsPath = file("${project.rootDir}/config/checkstyle/suppressions.xml")
@@ -43,7 +39,7 @@ task findbugs(type: FindBugs) {
     description 'Run Findbugs'
     group 'checkci'
 
-    ignoreFailures = false
+    ignoreFailures = true
     effort = "max"
     reportLevel = "high"
     excludeFilter = file("${project.rootDir}/config/findbugs/exclude.xml")
@@ -58,6 +54,9 @@ task findbugs(type: FindBugs) {
         xml {
             destination "${project.rootDir}/.framgia-ci-reports/findbugs.xml"
         }
+        html {
+            destination "${project.rootDir}/.framgia-ci-reports/findbugs.html"
+        }
     }
 }
 
@@ -65,7 +64,7 @@ task pmd(type: Pmd) {
     description 'Run Pmd'
     group 'checkci'
 
-    ignoreFailures = false
+    ignoreFailures = true
     ruleSetFiles = files("${project.rootDir}/config/pmd/ruleset.xml")
 
     source 'src/main/java'
@@ -85,11 +84,11 @@ task checkci {
     description 'Run Check CI'
     group 'checkci'
 
-    println "Please check reports in http://ci-pro.framgia.vn"
+    println "Please check reports in http://ci-reports.framgia.vn/"
 }
 
 checkci.dependsOn 'checkstyle', 'findbugs', 'pmd', 'lint'
 
 dependencies {
-    checkstyle 'com.puppycrawl.tools:checkstyle:6.15'
+    checkstyle 'com.puppycrawl.tools:checkstyle:8.0'
 }

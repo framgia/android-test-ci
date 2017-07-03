@@ -48,11 +48,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-    }
-
-            private int ABC () {
+    }private int ABC () {
                 return 1;
             }
 
+            private void XYC() {
+
+            }
 
 }
